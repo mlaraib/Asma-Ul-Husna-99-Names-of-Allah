@@ -29,6 +29,7 @@
             android:layout_below="@+id/picture"
             android:layout_marginTop="7dp"
             android:textStyle="bold"
+            android:textColor="#000"
             android:text="TextView" />
 
         <TextView
@@ -36,6 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Name"
+            android:textColor="#000"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:text="TextView" />

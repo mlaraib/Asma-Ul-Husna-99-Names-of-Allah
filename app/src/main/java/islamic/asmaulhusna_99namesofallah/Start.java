@@ -250,10 +250,10 @@ public class Start extends Activity {
         this.Name = (TextView) findViewById(R.id.Name);
         this.meaning = (TextView) findViewById(R.id.Meaning);
         this.time = (TextView) findViewById(R.id.time);
-        this.time.setVisibility(8);
-        this.Name.setTextColor(-1);
+        this.time.setVisibility(View.GONE);
+        //this.Name.setTextColor(-1);
         this.Name.setTextSize(20.0f);
-        this.meaning.setTextColor(-1);
+        //this.meaning.setTextColor(-1);
         this.meaning.setTextSize(16.0f);
         this.Name.setText("Allah");
         this.meaning.setText("The Greatest Name");
