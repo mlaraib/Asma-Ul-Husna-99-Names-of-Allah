@@ -1,6 +1,7 @@
 package islamic.asmaulhusna_99namesofallah;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -8,9 +9,11 @@ import android.os.Handler;
 import android.os.PowerManager.WakeLock;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.os.PowerManager;
 
 public class Start extends Activity {
     TextView Name;
@@ -20,7 +23,7 @@ public class Start extends Activity {
     Handler handler;
     int f48i;
     int f49j;
-    protected WakeLock mWakeLock;
+    protected PowerManager.WakeLock mWakeLock;
     TextView meaning;
     int[] nameId;
     ImageView picture;
@@ -125,6 +128,8 @@ public class Start extends Activity {
     }
 
     protected void onDestroy() {
+
+//        this.mWakeLock.release();
         this.stop = true;
         if (this.audio.isPlaying()) {
             System.out.println("SUCCESS");
@@ -142,9 +147,12 @@ public class Start extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         //getWindow().addFlags(128);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         this.audio = MediaPlayer.create(this, R.raw.audio);
         this.audio.getCurrentPosition();
         this.audio.start();
+
+
         this.timeDelay[0] = 0;
         this.timeDelay[1] = 11040;
         this.timeDelay[2] = 13040;
@@ -257,11 +265,26 @@ public class Start extends Activity {
         this.meaning.setTextSize(16.0f);
         this.Name.setText("Allah");
         this.meaning.setText("The Greatest Name");
+
         this.handler = new Handler();
         Runnable checkTime = new C02331();
         this.Name.setOnClickListener(new C02342());
         this.picture.setOnClickListener(new C02353(checkTime));
         this.handler.postDelayed(checkTime, 0);
+//        final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+//        this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
+//        this.mWakeLock.acquire();
+
+
+        audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+
+                startActivity(new Intent(Start.this,MainActivity.class));
+                Start.this.finish();
+
+            }
+        });
     }
 
 }
