@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.PowerManager;
 
+import java.io.IOException;
+
 public class Start extends Activity {
     TextView Name;
     String[] allData;
@@ -149,8 +151,17 @@ public class Start extends Activity {
         //getWindow().addFlags(128);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         this.audio = MediaPlayer.create(this, R.raw.audio);
-        this.audio.getCurrentPosition();
-        this.audio.start();
+        try {
+
+            this.audio.prepare();
+            this.audio.getCurrentPosition();
+            this.audio.start();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 
 
         this.timeDelay[0] = 0;
