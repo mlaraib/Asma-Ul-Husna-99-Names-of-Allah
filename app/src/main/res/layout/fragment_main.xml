@@ -1,0 +1,32 @@
+<LinearLayout android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/test1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+
+        android:background="@null"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/asmaulhusna1" />
+
+
+    <ImageButton
+        android:background="@drawable/imbtn11"
+        android:id="@+id/buttonAllNames"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content" />
+
+    <ImageButton
+        android:background="@drawable/imbtn22"
+        android:id="@+id/buttonList"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+
+</LinearLayout>
+

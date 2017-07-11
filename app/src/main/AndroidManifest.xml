@@ -19,10 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".List">
+        <activity android:name=".List"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
         </activity>
-        <activity android:name=".Start">
+        <activity android:name=".Start"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
         </activity>
+        <activity android:name=".ListData"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
