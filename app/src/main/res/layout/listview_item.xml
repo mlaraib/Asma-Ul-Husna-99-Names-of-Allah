@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:padding="5dip">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/LVname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="ABCD"
+        android:layout_marginTop="5dp"
+        android:text="Name"
         android:textColor="#262626"
         android:textSize="22dp"
         android:textStyle="bold" />
@@ -20,8 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/LVname"
         android:layout_marginTop="5dp"
-        android:paddingBottom="5dp"
-        android:text="ABCD"
+        android:text="Meaning"
         android:textColor="#262626"
         android:textSize="20dp" />
 
@@ -29,6 +28,7 @@
         android:id="@+id/LVimg"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"/>
 
 </RelativeLayout>

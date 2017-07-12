@@ -2,20 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/test1"
     tools:context=".MainActivity">
 
+
+    <RelativeLayout
+        android:id="@+id/adViewCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        />
     <include
         android:id="@+id/toolbar"
         layout="@layout/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        />
 
     <RelativeLayout
         android:id="@+id/relativeMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
+        android:layout_above="@id/adViewCon"
         android:background="@drawable/test1">
 
         <LinearLayout
@@ -26,10 +33,10 @@
 
             <ImageView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:background="@null"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/asmaulhusna1" />
 
 
@@ -37,7 +44,7 @@
                 android:id="@+id/buttonAllNames"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/imbtn11" />
 
             <ImageButton

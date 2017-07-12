@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -25,6 +26,9 @@ public class ListData extends AppCompatActivity{
         name = (TextView)findViewById(R.id.textName);
         meaning = (TextView)findViewById(R.id.textMeaning);
         description = (TextView)findViewById(R.id.textDescription);
+
+        RelativeLayout adView = (RelativeLayout)findViewById(R.id.adViewCon);
+        MainActivity.ads.loadBanner(adView);
 
         pos = getIntent().getIntExtra("Position", -1);
         Log.e("position", String.valueOf(pos));

@@ -1,6 +1,14 @@
 <resources>
-    <string name="app_name">Asmaul Husna</string>
+    <string name="app_name">Asma-ul-Husna</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="analytics_id"></string>
+    <string name="admob_appID"></string>
+    <string name="admob_video"></string>
+    <string name="ad_unit_id_interstitial"></string>
+    <string name="banner_AdMob"></string>
+    <string name="startApp"></string>
+
+    <string name="facebook_app_id"></string>
+    <string name="inter_fb"></string>
+    <string name="banner_fb"></string>
 </resources>

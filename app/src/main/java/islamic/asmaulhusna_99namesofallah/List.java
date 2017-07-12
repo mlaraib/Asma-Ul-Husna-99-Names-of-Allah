@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class List extends Activity {
@@ -46,6 +47,8 @@ public class List extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(1);
         setContentView(R.layout.activity_list);
+        RelativeLayout adView = (RelativeLayout)findViewById(R.id.adViewCon);
+        MainActivity.ads.loadBanner(adView);
         //name = (TextView) findViewById(R.id.tvName);
         //meaning = (TextView) findViewById(R.id.tvMeaning);
         //NameImage = (ImageView) findViewById(R.id.ivName);
@@ -68,6 +71,7 @@ public class List extends Activity {
                 Intent intent = new Intent(List.this, ListData.class);
                 intent.putExtra("Position", i);
                 startActivity(intent);
+                MainActivity.ads.showInterstitial(false);
             }
         });
     }

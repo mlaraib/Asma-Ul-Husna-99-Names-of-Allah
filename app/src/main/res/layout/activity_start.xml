@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_vertical"
+
     android:background="@drawable/activity2"
     android:gravity="center"
     tools:context=".Start">
@@ -10,36 +10,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="5dp">
 
         <ImageView
             android:id="@+id/picture"
             android:layout_width="300dp"
-            android:layout_height="290dp" />
+            android:layout_height="300dp"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/Name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/picture"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="10dp"
             android:text="TextView"
             android:textColor="#000"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/Meaning"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/Name"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="0dp"
             android:text="TextView"
-            android:textColor="#000" />
+            android:textColor="#000"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/time"

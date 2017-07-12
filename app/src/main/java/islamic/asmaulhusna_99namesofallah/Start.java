@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager.WakeLock;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
@@ -221,8 +222,8 @@ public class Start extends Activity {
     }
 
     public void onBackPressed() {
-
         this.audio.stop();
+        Start.this.finish();
         super.onBackPressed();
     }
 
@@ -238,6 +239,23 @@ public class Start extends Activity {
         this.audio.release();
         System.out.println("SUCCESS");
         super.onDestroy();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("Resume", "resume");
+        audio.start();
+
+
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("Pause", "Pause");
+        audio.pause();
+
     }
 
     protected void onCreate(Bundle savedInstanceState) {
