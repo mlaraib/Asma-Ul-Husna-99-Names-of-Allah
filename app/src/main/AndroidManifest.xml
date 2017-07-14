@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="islamic.asmaulhusna_99namesofallah"
+<manifest package="com.grovelet.namesofAllah.asmaulhusna2017"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -91,22 +91,22 @@
 
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.grovelet.namesofAllah.asmaulhusna2017.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".List"
+        <activity android:name="com.grovelet.namesofAllah.asmaulhusna2017.List"
             android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
-        <activity android:name=".Start"
+        <activity android:name="com.grovelet.namesofAllah.asmaulhusna2017.Start"
             android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
-        <activity android:name=".ListData"
+        <activity android:name="com.grovelet.namesofAllah.asmaulhusna2017.ListData"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 

@@ -1,4 +1,4 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 /**
  * Created by iamla on 10/13/2016.
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+
 
 public class ListViewAdapter extends BaseAdapter {
     String[] Meanings;

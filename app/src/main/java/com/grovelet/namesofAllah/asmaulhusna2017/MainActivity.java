@@ -1,4 +1,4 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +13,8 @@ import android.widget.RelativeLayout;
 
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -150,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ads = new Ads(this, true, true, false);
+        ads = new Ads(this, true, true, true);
 
         if (android.os.Build.VERSION.SDK_INT >= 21) {
             Window statusBar = getWindow();

@@ -1,14 +1,15 @@
 <resources>
-    <string name="app_name">Asma-ul-Husna</string>
+    <string name="app_name">Asma ul Husna 2017</string>
 
-    <string name="analytics_id"></string>
-    <string name="admob_appID"></string>
-    <string name="admob_video"></string>
-    <string name="ad_unit_id_interstitial"></string>
-    <string name="banner_AdMob"></string>
-    <string name="startApp"></string>
+    <string name="analytics_id">UA-60563114-1</string>
+    <string name="admob_appID">ca-app-pub-3478891142471061~4428807839</string>
+    <string name="admob_video">ca-app-pub-3478891142471061/7382274234</string>
+    <string name="ad_unit_id_interstitial">ca-app-pub-3478891142471061/7382274234</string>
+    <string name="banner_AdMob">ca-app-pub-3478891142471061/2812473835</string>
+    <string name="startApp">211639846</string>
+    <string name="admob_small_native">ca-app-pub-3478891142471061/8719406639</string>
 
-    <string name="facebook_app_id"></string>
-    <string name="inter_fb"></string>
-    <string name="banner_fb"></string>
+    <string name="facebook_app_id">1856015024727153</string>
+    <string name="inter_fb">1856015024727153_1856016931393629</string>
+    <string name="banner_fb">1856015024727153_1856016811393641</string>
 </resources>

@@ -1,4 +1,4 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 
 import android.app.Activity;
@@ -16,7 +16,10 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.startapp.android.publish.adsCommon.StartAppSDK;
+
+
 
 /**
  * Created by anees on 6/5/2017.
@@ -147,18 +150,14 @@ public class Ads {
                 @Override
                 public void onError(Ad ad, AdError adError) {
 
+                    if (fbBanner!=null){
+                        fbBanner.destroy();
+                    }
                     relativeLayout.removeAllViews();
                     Log.e("Relative layout 2", String.valueOf(relativeLayout.getChildCount()));
 
                     if (admob) {
-                        adMobBanner.loadAd(new AdRequest.Builder().build());
-
-                        if (relativeLayout.getChildCount() == 0) {
-                            relativeLayout.addView(adMobBanner);
-                        } else {
-                            relativeLayout.removeAllViews();
-                        }
-
+                        loadSmallNative(relativeLayout);
                     }
                 }
 
@@ -199,15 +198,8 @@ public class Ads {
 
 
             }
-            adMobBanner.loadAd(new AdRequest.Builder().build());
 
-
-            if (relativeLayout.getChildCount() == 0) {
-                relativeLayout.addView(adMobBanner);
-            } else {
-                relativeLayout.removeAllViews();
-            }
-
+            loadSmallNative(relativeLayout);
 
         }
 
@@ -243,5 +235,31 @@ public class Ads {
         }
     }
 
+
+    public void loadSmallNative(final RelativeLayout relativeLayout){
+        final NativeExpressAdView nativeExpressAdView = new NativeExpressAdView(context);
+        // nativeExpressAdView.setAdUnitId(context.getResources().getString(R.string.admob_new_native));
+        nativeExpressAdView.setAdUnitId(context.getResources().getString(R.string.admob_small_native));
+        // nativeExpressAdView.setAdUnitId("ca-app-pub-3940256099942544/2793859312");
+
+        nativeExpressAdView.setAdSize(new AdSize(AdSize.FULL_WIDTH, 80));
+            nativeExpressAdView.loadAd(new AdRequest.Builder().build());
+        nativeExpressAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                relativeLayout.removeAllViews();
+                relativeLayout.addView(nativeExpressAdView);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int i) {
+                Log.e("Admob Native", "AdError Code " + i);
+
+            }
+        });
+
+
+
+    }
 }
 

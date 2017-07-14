@@ -1,20 +1,19 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PowerManager.WakeLock;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.os.PowerManager;
+
+
 
 public class Start extends Activity {
     TextView Name;

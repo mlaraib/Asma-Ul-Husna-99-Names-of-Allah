@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "islamic.asmaulhusna_99namesofallah"
+        applicationId "com.grovelet.namesofAllah.asmaulhusna2017"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

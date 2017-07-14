@@ -1,4 +1,4 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+
 
 public class List extends Activity {
    // String[] Meanings;

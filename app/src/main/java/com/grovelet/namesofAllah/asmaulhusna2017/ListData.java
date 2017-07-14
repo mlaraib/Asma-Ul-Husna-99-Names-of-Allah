@@ -1,4 +1,4 @@
-package islamic.asmaulhusna_99namesofallah;
+package com.grovelet.namesofAllah.asmaulhusna2017;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+
 
 /**
  * Created by anees on 7/11/2017.

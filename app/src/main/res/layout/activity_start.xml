@@ -5,7 +5,7 @@
 
     android:background="@drawable/activity2"
     android:gravity="center"
-    tools:context=".Start">
+    tools:context="com.grovelet.namesofAllah.asmaulhusna2017.Start">
 
     <LinearLayout
         android:layout_width="match_parent"
